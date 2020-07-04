@@ -1,0 +1,23 @@
+<!--
+  @File Name          : chilComp.html
+  @Description        : 
+  @Author             : ChangeMeIn@UserSettingsUnder.SFDoc
+  @Group              : 
+  @Last Modified By   : ChangeMeIn@UserSettingsUnder.SFDoc
+  @Last Modified On   : 6/29/2020, 10:05:41 PM
+  @Modification Log   : 
+  Ver       Date            Author      		    Modification
+  1.0    6/29/2020   ChangeMeIn@UserSettingsUnder.SFDoc     Initial Version
+-->
+<template>
+  <lightning-card title={myname} icon-name="standard:user">
+    <div>
+      Testing : {fromgrandchildmyname}
+      <lightning-input value={childmyname} placeholder="enter your name"  onchange={updateName}></lightning-input>
+      <br/>
+      <c-grandchild my-name={childmyname} onsubmit={handlesubmit}></c-grandchild>
+    </div>
+  </lightning-card>
+
+    
+</template>

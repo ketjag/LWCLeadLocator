@@ -1,0 +1,40 @@
+<!--
+  @File Name          : myFirstLwcComponent.html
+  @Description        : 
+  @Author             : ChangeMeIn@UserSettingsUnder.SFDoc
+  @Group              : 
+  @Last Modified By   : ChangeMeIn@UserSettingsUnder.SFDoc
+  @Last Modified On   : 07-04-2020
+  @Modification Log   : 
+  Ver       Date            Author      		    Modification
+  1.0    6/29/2020   ChangeMeInx`@UserSettingsUnder.SFDoc     Initial Version
+-->
+<template>
+    <div class="c-container">
+        <lightning-layout multiple-rows="true">
+            <lightning-layout-item padding="around-small" size="12">
+                <lightning-layout>
+                    <lightning-layout-item padding="around-small" size="6">
+                        <div class="slds-box slds-theme_default">
+                            <c-lead-list onnewsearch={handleNewSearch} 
+                            onsearchcomplete={handleSearchComplete}></c-lead-list>
+                        </div>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="around-small" size="6">
+                        <div class="slds-box slds-theme_default">
+                         <lightning-card>
+                             <template if:true={isSearchComplete}>
+                                <c-lead-map></c-lead-map>
+                             </template>
+                             <template if:false={isSearchComplete}>
+
+                             </template>
+                         </lightning-card>
+
+                        </div>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </lightning-layout-item>
+        </lightning-layout>
+    </div>
+</template>
